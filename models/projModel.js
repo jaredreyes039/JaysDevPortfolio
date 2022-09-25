@@ -3,10 +3,10 @@ const {Schema} = mongoose
 
 const ProjSchema = new Schema({
     name: {
-        type: String,
+        type: "String",
     },
     desc: {
-        type: String
+        type: "String"
     },
     tags: {
         type: "Mixed",
@@ -15,7 +15,7 @@ const ProjSchema = new Schema({
         type: "Mixed"
     },
     img_url: {
-        type: String
+        type: "String"
     }
 })
 
