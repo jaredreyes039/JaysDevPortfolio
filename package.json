@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "my new portfolio for employers and clients alike to enjoy and explore!",
   "main": "server.js",
+  "engines": {
+    "node":"18.9.0"
+  },
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
