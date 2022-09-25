@@ -2,7 +2,7 @@ const express = require('express');
 const contactrouter = express.Router();
 const contactModel = require("../models/contactModel")
 
-contactrouter.get('/', async (req,res)=>{
+contactrouter.get('/', (req,res)=>{
     res.send("Denied, sorry mate!")
 })
 
