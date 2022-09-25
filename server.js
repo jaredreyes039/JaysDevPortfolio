@@ -15,7 +15,6 @@ require('dotenv').config()
 
 
 app.use(bodyParser.json());
-app.use(cors());
 
 
 // DB Config
