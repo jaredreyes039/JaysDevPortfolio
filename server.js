@@ -6,11 +6,11 @@ const path = require('path');
 const projrouter = require('./routes/projRoutes');
 const contactrouter = require('./routes/contactRoute');
 const app = express();
+require('dotenv').config()
 // Routers
 
 //BP Midware
 
-require('dotenv').config()
 
 
 
@@ -45,8 +45,7 @@ mongoose.connect(db)
 // Server Init
 
 const server = app.listen(process.env.PORT || 5000, () => {
-    const port = server.address().port;
-    console.log(`Express is working on port ${port}`);
+    console.log(`Express is working on port ${process.env.PORT}`);
   });
 
 // Connection Successful!!!! :3

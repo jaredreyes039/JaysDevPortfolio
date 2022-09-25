@@ -3,16 +3,16 @@ const {Schema} = mongoose
 
 const ContactSchema = new Schema({
     first: {
-        type: "String",
+        type: String,
     },
     last: {
-        type: "String"
+        type: String,
     },
     email: {
-        type: "String",
+        type: String,
     },
     reason: {
-        type: "String",
+        type: String,
     }
 })
 

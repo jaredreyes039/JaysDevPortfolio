@@ -3,19 +3,19 @@ const {Schema} = mongoose
 
 const ProjSchema = new Schema({
     name: {
-        type: "String",
+        type: String,
     },
     desc: {
-        type: "String"
+        type: String,
     },
     tags: {
-        type: "Mixed",
+        type: Array,
     },
     stack: {
-        type: "Mixed"
+        type: Array,
     },
     img_url: {
-        type: "String"
+        type: String
     }
 })
 
