@@ -15,7 +15,7 @@ export default function ProjectContainer(props){
     const [display, setDisplay] = useState()
 
     const fetchProjects = async () => {
-        await fetch('/projdata', {method: "GET"})
+        await fetch('/projdata')
             .then(res => res.json())
             .then(data => setProjectsData(data))
             .finally(()=> setIsLoading(false))

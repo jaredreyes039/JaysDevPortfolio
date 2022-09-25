@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 
 // DB Config
 
-const db = process.env.REACT_APP_MONGO_KEY
+const db = process.env.REACT_APP_MONGO_KEY.toString()
 
 app.use('/projdata', projrouter)
 app.use('/contactforms', contactrouter)
