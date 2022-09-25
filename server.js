@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 
 // DB Config
 
-const db = process.env.REACT_APP_MONGO_KEY.toString()
+const db = process.env.REACT_APP_MONGO_KEY
 
 app.use('/projdata', projrouter)
 app.use('/contactforms', contactrouter)
@@ -43,8 +43,9 @@ mongoose.connect(db)
 
 // Server Init
 
-const server = app.listen(process.env.PORT || 5000, () => {
+    app.listen(process.env.PORT || 5000, () => {
     console.log(`Express is working on port ${process.env.PORT}`);
   });
+
 
 // Connection Successful!!!! :3
