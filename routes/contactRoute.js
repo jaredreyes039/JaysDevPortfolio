@@ -16,7 +16,7 @@ contactrouter.post('/', (req, res)=>{
             reason: req.body.reason
         }
     )
-    newContact.save()
+     newContact.save()
     res.send("Contact form submitted!")
 })
 
