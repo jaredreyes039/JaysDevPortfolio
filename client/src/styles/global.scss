@@ -1,0 +1,16 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --ti-cursor-transform: translateX(.15em) !important;
+    --ti-cursor-color: #14FF0075;
+}
+
+// Sections
+
+.section-header{
+    width: 100%;
+    color: white;
+}

@@ -1,0 +1,29 @@
+.blog-container{
+    background-color: #000000;
+    width: 100%;
+    height: fit-content;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    font-family: 'Anton', sans-serif;
+    padding-right: 1.25%;
+    padding-left: 1.25%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    h1{
+        text-align: left;
+    }
+    h1::after {
+        display: inline-block;
+        content: "";
+        border-top: .3rem solid white;
+        width: 75%;
+        margin: 0 1rem;
+        transform: translateY(-1rem);
+    }
+    span{
+        text-align: center;
+        color: #00FFD1;
+        font-size: 1.5em;
+    }
+}

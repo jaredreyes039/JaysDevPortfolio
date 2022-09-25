@@ -1,0 +1,48 @@
+@media screen and (max-width: 667px){
+    *{
+        overflow-x: hidden;
+    }
+    .clock{
+        font-size: 0.5em;
+    }
+    .shield{
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .nav-sticky{
+        display: none;
+    }
+    .proj-item{
+        flex-direction: column !important;
+        align-items: center;
+        font-size: 0.8em;
+        img{
+            width: 100% !important;
+            margin: 0px;
+
+        }
+
+        .tags-list{
+            display: none;
+        }
+        .stack-list{
+            display: none;
+        }
+    }
+    .contact-container{
+        font-size: 0.85em;
+        text-align: center;
+        h2{
+            margin: 0px;
+        }
+        input, select, button{
+            margin-top: 5%;
+        }
+    }
+    .about-container{
+        .about-txt{
+            font-size: 0.85em;
+        }
+    }
+}
