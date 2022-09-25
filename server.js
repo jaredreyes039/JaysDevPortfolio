@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 
 // DB Config
 
-const db = process.env.REACT_APP_MONGO_KEY
+const db = 'mongodb+srv://jaydev:Halloween1984102999@portfoliodata.4gl1lr6.mongodb.net/?retryWrites=true&w=majority'
 
 app.use('/projdata', projrouter)
 app.use('/contactforms', contactrouter)
