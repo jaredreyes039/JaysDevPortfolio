@@ -10,18 +10,47 @@
 }
 
 .ipsub-container{
-    font-family: 'Press Start 2P', cursive;
-    font-size: 0.5em;
-    margin-bottom: 0.5%;
-    margin-top: 0.5%;
+    position: relative;
+    z-index: 1;
+    font-family: monospace;
+    font-size: 0.75em;
+    margin-top: 0.25%;
 }
 
 .clock{
     position: absolute;
     right: 10px;
     bottom: 10px;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 0.75em;
+    font-family: monospace;
+}
+
+.bg-text{
+    width: fit-content;
+    max-width: 25%;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 0.1em;
+    color: white;
+    position: absolute;
+    opacity: 0.25 !important;
+    font-size: 1.75em;
+    z-index: 0;
+    right: 15%;
+    top: 15%;
+    text-align: right;
+    &:nth-of-type(2){
+        left:30%;
+        bottom:5%;
+        top: unset;
+        text-align: left;
+        max-width: 25%;
+    }
+    &:nth-of-type(3){
+        left:15%;
+        bottom:65%;
+        top: unset;
+        text-align: left;
+        max-width: 25%;
+    }
 }
 
 .hero-central-text{

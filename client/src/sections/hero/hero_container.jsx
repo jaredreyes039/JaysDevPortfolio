@@ -5,6 +5,9 @@ import IPSubContainer from "./ipsubblock/ip_sub_container";
 import '../../styles/sections/hero.scss'
 import HeroCentral from "./hero_central_text";
 import './Shield.svg';
+import BGTxt1 from "./bgtxt/bgtxt_1";
+import BGTxt2 from "./bgtxt/bgtxt_2";
+import BGTxt3 from "./bgtxt/bgtxt_3";
 
 
 export default function HeroContainer(props){
@@ -43,6 +46,9 @@ export default function HeroContainer(props){
             <IPSubContainer ipsubentry = {sub} />
             <HeroCentral />
             <ClockContainer />
+            <BGTxt1 />
+            <BGTxt2 />
+            <BGTxt3 />
             <div className="shield">
             <svg width="287" height="352" viewBox="0 0 287 352" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 81.2272L142.581 0L286 81.2272V186L242.387 270.757L142.581 351L38.5806 270.757L0 186V81.2272Z" stroke="#00FFD1"/>
