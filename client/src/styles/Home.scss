@@ -1,0 +1,572 @@
+@import './globals.scss';
+
+
+// Page Header
+// Logo designed in Canva
+// Logo is an SVG
+.headsection {
+  overflow: hidden;
+}
+.site-bg-logo {
+  width: 50%;
+  aspect-ratio: 1;
+  position: fixed;
+  left: 50%;
+  top: -5%;
+  transform: translate(-50%);
+  z-index: 0;
+}
+
+// Necessary overlay for marquee rotation effect
+.rotate-logo {
+  animation: rotate360 15000ms linear infinite
+}
+
+// About
+.aboutSection{
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  justify-content: space-evenly;
+  gap: 24px;
+}
+.textBox{
+  background-color: #f9f9f9;
+  backdrop-filter: hue-rotate(90deg) blur(10px);
+  border-radius: 4px;
+  width: fit-content;
+  min-width: 360px;
+  max-width: 420px;
+  min-height: 600px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  color: #101010;
+  font-size: 1.25rem;
+  transition: all 100ms ease-in-out;
+  opacity: 0.95;
+  background-image: url('../public/FrontEndBanner.svg');
+  background-position: 0% 75%;
+  & h1 {
+    text-align: center;
+    margin-bottom: 32px;
+    color: #9600ff;
+  }
+  &:hover{
+    padding: 32px;
+    cursor: default;
+    filter: brightness(1.25);
+  }
+  & P {
+    margin-bottom: 1rem;
+  }
+  & .textBox-list {
+    list-style: circle;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    width: 50%;
+    
+  }
+}
+
+// Switched from flex to grid in this update
+// Note to Self: Please leave the grid alone, it is okay, stop restyiling it!
+.projectsSection{
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f9f9f9;
+  & .projects-container {
+    backdrop-filter: blur(4px);
+    display: grid;
+    align-self: center;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 16px;
+  }
+  & h1 {
+    width: fit-content;
+    margin-bottom: 32px;
+    font-size: 5rem;
+    backdrop-filter: blur(4px);
+  }
+  & h3 {
+    width: fit-content;
+    margin-bottom: 32px;
+  }
+  & p {
+    width: 50%;
+    margin-bottom: 32px;
+  }
+}
+.projectBox{
+  cursor: default;
+  border-radius: 4px;
+  align-self: center;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  margin-top: 32px;
+  margin-bottom: 32px;
+  & img {
+    width: 100%;
+  }
+  &:hover{
+    border: 2px solid #fefefe;
+    filter: brightness(1.15);
+    cursor: pointer;
+  }
+}
+
+// Contact Information (Section & Banner)
+.contactContainer{
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 720px;
+  height: 720px;
+  transition: all 150ms ease-in-out;
+  & .contact-overlay{
+    width: 100%;
+    height: 720px;
+    min-height: 720px;
+    max-height: 720px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    content: "";
+  }
+  & img {
+    width: 100%;
+  }
+  & form {
+    border-radius: 4px;
+    padding: 32px;
+    align-self: flex-end;
+    & span{
+      color: #ff00c1;
+      cursor: pointer;
+      transition: all 100ms ease-in-out;
+      &:hover{
+        color: #9600ff;
+        filter: brightness(1.25);
+      }
+    }
+    & p {
+      color: #ffffff;
+      margin-bottom: 32px;
+      font-size: 1.5rem;
+      width: 100%;
+      text-align: justify;
+    }
+  }
+}
+.contactInput{
+  opacity: 0;
+  animation: fadeIn 250ms ease-in-out forwards 1100ms;
+  width: 720px;
+  margin-bottom: 64px;
+  & input{
+    border-radius: 25px 0px 0px 25px;
+    background-color: #eeeeee;
+    border: none;
+    min-height: 72px;
+    max-height: 72px;
+    width: 75%;
+    padding-left: 16px;
+    font-size: 1.5rem;
+    transition: background-color 150ms ease-in-out;
+    &:focus{
+      color: $whiteTone1;
+      outline: none;
+      background-color: $purpleDark75;
+      filter: brightness(1.25);
+    }
+    &:hover{
+      background-color: $purpleDark75;
+      filter: brightness(1.25);
+      color: $whiteTone1;
+      cursor: pointer;
+    }
+  }
+  & button {
+    border-radius: 0px 25px 25px 0px;
+    font-size: 1.5rem;
+    width: 25%;
+    background: linear-gradient(-135deg, $purpleDark100 0%, $purpMed100 70%, $purpLight100 100%);
+    min-height: 72px;
+    border: none;
+    color: $whiteTone2;
+    transition: all 150ms ease-in-out;
+    &:hover{
+      filter: brightness(1.25);
+      cursor: pointer;
+    }
+  }
+}
+.contact-banner{
+  animation: slideInFromTop 250ms ease-in-out forwards;
+  background-color: #00fff9;
+  position: fixed;
+  left: 0;
+  top: 0px;
+  width: 100%;
+  z-index: 99;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  & svg {
+    color: #ff00c1 ;
+  }
+  & div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  & span {
+    font-weight: 750;
+    color: #101010;
+    & a {
+      color: #101010;
+      text-decoration: underline;
+      transition: all 100ms ease-in-out;
+      &:hover{
+        color: #ff00c1 !important;
+      }
+    }
+  }
+}
+
+// Footer
+.footerBox {
+  color: #ffffff;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-size: 1.25rem;
+    & h1 {
+      margin-bottom: 8px;
+      text-decoration: underline;
+    }
+    & ul {
+      list-style: none;
+      padding-left: 16px;
+      & li {
+        margin-bottom: 8px;
+        & a {
+          transition: color 150ms ease-in-out;
+        }
+        & a:hover {
+          color: #00fff9;
+        }
+      }
+    }
+}
+
+// Animations (logo, text)
+@keyframes slideIn{
+  0% {
+  }
+  100% {
+    opacity: 1;
+    padding: 16px;
+  }
+}
+@keyframes fadeIn{
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes slideInFromTop{
+  0%{
+    top: -100px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+@keyframes rotate360 {
+  0% {
+    transform: translate(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%) rotateZ(360deg);
+  }
+}
+
+
+@media  screen and (max-width: 1570px) {
+  .site-bg-logo {
+    width: 60%;
+  }
+  .headsection {
+    margin-bottom: 2.5rem !important;
+  }
+  .textBox {
+    margin: 64px;
+  }
+  .projectsSection {
+    & h1 {
+      font-size: 3rem;
+    }
+  }
+}
+@media screen and (max-width: 1355px){
+  .contactInput {
+    width: 95%;
+    & p {
+      font-size: 1.25rem;
+    }
+    & input, button {
+      font-size: 1.25rem;
+    }
+  }
+  .contactContainer{
+    & form {
+      align-self: center;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      & .contactInput {
+        width: 100%;
+        & p {
+          font-size: 1.25rem;
+        }
+        & input, button {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+  .projectsSection{
+    & h3 {
+      text-align: center;
+    }
+  }
+  .projectBox {
+    flex-wrap: nowrap !important;
+  }
+  .projects-container {
+    grid-template-columns: repeat(2,1fr) !important;
+  }
+}
+@media screen and (max-width: 1280px){
+  .site-bg-logo {
+    width: 75%;
+  }
+  .contact-overlay {
+    flex-direction: column !important;
+    & img {
+      width: 40%;
+      min-width: 270px;
+      align-self: center;
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .site-bg-logo {
+    width: 77.5%;
+  }
+  .textBox {
+    max-width: 100%;
+    min-width: none;
+    background-repeat: no-repeat;
+    background-position: 100%;
+  }
+  footer {
+    flex-wrap: wrap;
+    padding-bottom: 20rem;
+  }
+}
+@media screen and (max-width: 750px){
+  .site-bg-logo {
+    width: 87.5%;
+  }
+  .headContainer {
+    display: none;
+  }
+  .contactInput {
+    & button {
+      font-size: 1.1rem !important;
+    }
+  }
+  .projects-container {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .projectsSection {
+    & h1 {
+      font-size: 2.5rem;
+    }
+  }
+}
+@media screen and (max-width: 550px){
+  .site-bg-logo {
+    top: 5%;
+  }
+  .contact-banner {
+    flex-direction: column;
+  }
+  .spin::before {
+    top: 110% !important;
+  }
+  .textBox {
+    margin: 16px;
+  }
+  .projectsSection {
+    & h1 {
+      font-size: 2rem;
+    }
+  }
+  .contactContainer{
+    & .contactInput {
+      & p {
+        margin-bottom: 8px;
+        margin-top: 8px;
+      }
+    }
+  }
+  footer {
+    flex-wrap: wrap;
+    padding-bottom: 5rem;
+  }
+  .contactInput{
+    display: flex;
+    flex-direction: column;
+    & input, button {
+      font-size: 1rem !important;
+      border-radius: 4px;
+      align-self: center;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+    & button {
+      width: 75%;
+    }
+  }
+  footer {
+    display: flex;
+    flex-direction: column !important;
+  }
+}
+@media screen and (max-width: 420px){
+  .textBox {
+    font-size: 0.95rem;
+    min-width: 100px;
+  }
+  
+  .projectsSection {
+    margin-bottom: 10rem;
+    & h1 {
+      width: 95%;
+      text-align: center;
+    }
+    .projectBox {
+      width: 95%;
+      & h1 {
+        width: 200px;
+      }
+    }
+  }
+  .site-bg-logo {
+    top: 7.5%;
+  }
+}
+@media screen and (max-width: 375px){
+  .site-bg-logo {
+    top: 10% !important;
+  }
+  .headTextContainer {
+    margin-top: 32px;
+    margin-bottom: 64px;
+  }
+  .textBox {
+    font-size: 0.95rem;
+    min-width: 100px;
+  }
+  .projectsSection {
+    & p:first {
+      display: none !important;
+    }
+    .projects-container {
+      width: 90%;
+    }
+    & h1 {
+      width: 95%;
+      text-align: center;
+    }
+    .projectBox {
+      min-width: 100px;
+      width: 100%;
+      & h1 {
+        width: 200px !important;
+      }
+      & p {
+        font-size: 0.9rem !important;
+      }
+    }
+  }
+  .contactInput {
+    & p {
+      font-size: 1.05rem !important;
+      text-align: left !important;
+    }
+    & input, button {
+      width: 95%;
+    }
+  }
+  .footerBox {
+    width: 250px;
+    & li {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+@media screen and (max-width: 320px){
+  .contactContainer{
+    form {
+      padding: 16px;
+    }
+  }
+  .contact-overlay {
+    padding: 2px !important;
+    & img {
+      display: none;
+    }
+    & .contactInput {
+      width: 100%;
+      & input, button {
+        width: 100%;
+      }
+    }
+  }
+  .footerBox{
+    font-size: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+  }
+}
+
+// Might be necessary override- testing later
+@media screen and (max-width: 810px){
+  .projectBox {
+    & img {
+      width: 100%;
+      min-width: none;
+      max-width: none;
+    }
+  }
+}

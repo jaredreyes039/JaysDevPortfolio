@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0ced90ad.css",
+    "main.js": "/static/js/main.23ab72ed.js",
+    "static/media/ReachOutBanner.svg": "/static/media/ReachOutBanner.b8a71f94301288dc8d56d06bc12af7e3.svg",
+    "static/media/DevDesignBGIconOverlay.svg": "/static/media/DevDesignBGIconOverlay.3bcda31a2c10e0eff98fcf23a67bd4a8.svg",
+    "static/media/DevDesignBGIcon2.gif": "/static/media/DevDesignBGIcon2.58e8861a594d7ded1f45.gif",
+    "static/media/FrontEndBanner.svg": "/static/media/FrontEndBanner.bcb9e67409cddbfec7fb.svg",
+    "index.html": "/index.html",
+    "main.0ced90ad.css.map": "/static/css/main.0ced90ad.css.map",
+    "main.23ab72ed.js.map": "/static/js/main.23ab72ed.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0ced90ad.css",
+    "static/js/main.23ab72ed.js"
+  ]
+}
